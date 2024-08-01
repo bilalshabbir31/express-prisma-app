@@ -1,4 +1,4 @@
-const Prisma = require('../config/prismaClient')
+import Prisma from "../config/prismaClient.js";
 
 const createUser = async (req, res) => {
   const { email, name, password } = req.body;
@@ -105,4 +105,4 @@ const deleteUser = async (req, res) => {
 };
 
 
-module.exports = { createUser, fetchAllUsers, getUser, updateUser, deleteUser };
+export { createUser, fetchAllUsers, getUser, updateUser, deleteUser };
