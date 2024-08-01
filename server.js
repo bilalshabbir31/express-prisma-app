@@ -1,12 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const calculateRequestProcessTime = require('./middlewares/reqHandler');
-const userRouter = require('./routers/user');
-const { notFound } = require('./middlewares/errorHandler');
+import dotenv from "dotenv"
+import express from "express"
+import calculateRequestProcessTime from "./middlewares/reqHandler.js";
+import userRouter from './routers/user.js'
+import notFound from './middlewares/errorHandler.js'
 const app = express();
 const PORT= process.env.PORT;
 
-
+dotenv.config();
 app.use(calculateRequestProcessTime);
 app.use(express.json());
 app.use(userRouter);

@@ -7,4 +7,4 @@ const calculateRequestProcessTime = (req, res, next) => {
   console.log();
 };
 
-module.exports = calculateRequestProcessTime;
+export default calculateRequestProcessTime;
